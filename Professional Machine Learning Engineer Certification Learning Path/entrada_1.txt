@@ -1,0 +1,181 @@
+Transcreva como um arquivo markdown mantendo a linguagem em ingles
+
+Transcript
+00:00
+Person: Next, let's take a look at activation functions and how they help training deep neural network models.
+00:06
+Here's a good example.
+00:07
+This is a graphical representation of a linear model.
+00:11
+We have three inputs on the bottom: X1, X2 and X3, shown by those blue circles.
+00:17
+They're combined with some weight, W, given to them on each of those edges.
+00:21
+Those are the arrows that are pointing, and that produces an output, which is the green circle there at the top.
+00:28
+There's often an extra bias term that's added in, but for simplicity, that isn't going to be shown here.
+00:34
+This is a linear model since it's of the form Y equals W1 times X1 plus W-2 times X2 plus W3 times X3.
+00:45
+Now, we can substitute each group of weights for a similar new weight.
+00:50
+Does this look familiar?
+00:50
+It's exactly the same linear model as before despite adding a hidden layer of neurons.
+00:58
+How is that so?
+00:58
+What happens?
+01:01
+Well, the first neuron in the hidden layer that's on the left takes the weights from all the three input nodes.
+01:08
+Those are all the red arrows that you see here.
+01:11
+And you can see that's w1, w4 and w7, all combining, respectively, as you see clearly highlighted.
+01:20
+Now, as you take the new weight, that's the output of the first neuron, which, in
+01:25
+our case, is w10 now, as one of those three weights going into the final output.
+01:32
+You'll see that we do this two more times for the other two yellow neurons and their inputs respectively from X1, X2 and X3.
+01:44
+And you can see that there's a ton of matrix multiplication going on behind the scenes.
+01:50
+Honestly, in my experience, machine learning is basically taking arrays of various dimensionality like 1D, 2D
+01:56
+or 3D, and then smashing them and multiplying them against each other where one array or a
+02:01
+tensor could be a randomized array of starting weights of the model, and the other is the
+02:07
+input data set, and yet a third is the output array or tensor of the hidden layer.
+02:13
+You'll see behind the scenes it's honestly just a lot of simple math, depending upon your algorithm, but a lot of it is done really, really, really quickly.
+02:20
+That's the power of machine learning.
+02:22
+Here, though, we still have a linear model.
+02:26
+How can we change that?
+02:27
+Let's go deeper.
+02:28
+I know what you're thinking: What if we just add another hidden layer?
+02:33
+Does that make it a deeper neural network?
+02:35
+Well, unfortunately this once again collapses all the way back down into a single weight matrix multiplied by each of those three inputs.
+02:44
+It's the same linear model.
+02:45
+We can continue this process in adding more and more and more hidden neuron layers, but it would be the same result, albeit it
+02:52
+would be a lot more costly computationally for training and for prediction or predicting because it's a much more complicated architecture than we actually need.
+03:02
+So here's an interesting question: How do you escape from having just a linear model?
+03:09
+Well, by adding nonlinearity, of course.
+03:11
+That's the key.
+03:14
+The solution is adding a nonlinear transformation layer, which is facilitated by a nonlinear activation function such as a sigmoid, tan H or ReLU.
+03:26
+In thinking of the terms of the graph that's created by TensorFlow, you can imagine each neuron actually having two nodes, the first node being
+03:34
+the result of the weighted sum, W times X plus B, and the second node is the result of that being passed through the activation function.
+03:45
+In other words, there are the inputs to the activation function followed by the outputs of the activation
+03:49
+function, so the activation function acts as a transition point between layers, and so you get that nonlinearity.
+03:59
+Adding in this nonlinear transformation is the only way to stop the neural network from condensing back down into a shallow network.
+04:07
+Even if you have a layer with nonlinear activation functions in your network, if elsewhere in your network you
+04:12
+have two or more layers with linear activation functions, those can all still be collapsed down into just one network.
+04:21
+So usually neural networks have all layers nonlinear for the first and minus-one layers and then
+04:27
+have the final layer transformation be linear for regression or sigmoid or a softmax for classification.
+04:35
+It all depends on what you want that final output to be.
+04:40
+Now, you might be thinking, "What nonlinear activation function do I use? There's many of them," right?
+04:45
+You've go sigmoid.
+04:45
+You've got scaled and shifted sigmoid.
+04:49
+You have the tan-H of the hyperbolic tangent being some of those earlies.
+04:53
+However, as we're going to talk about, these kind of have a saturation, which leads to what we
+04:58
+call the vanishing gradient problem where, where there's zero gradients, the models' weights don't update anything times zero, right?
+05:06
+And training halts.
+05:07
+So the rectified linear unit, or ReLU, for short, is one of our favorites because it's simple, and it works really well.
+05:16
+Let's talk about it a bit.
+05:19
+In the positive domain, it's linear, as you see here, so we don't have that saturation, whereas in the negative domain, the function is zero.
+05:27
+Networks with ReLU hidden activations often have 10 times the speed of training than networks with sigmoid hidden activations.
+05:36
+However, due to the negative domain's function always being zero, we can end up with ReLU layers dying.
+05:40
+Now, what I mean by that is, you'll start getting inputs in the negative domain.
+05:46
+Then, the output of the activation will be zero, negative times zero, zero, which doesn't help in the next layer getting the inputs back into the positive domain.
+05:55
+It's still going to be zero.
+05:57
+This compounds and creates a lot of zero activations.
+06:00
+During back propagation, when updating the weights, since we have to multiply our error's derivative by the activation, we end up with a gradient of zero, thus
+06:09
+a weight update of zero, thus, as you can imagine, with a lot of zeros the weights aren't going to change, and the training fails for that layer.
+06:18
+Fortunately this problem has been encountered a lot in the past, and there's a lot of really cool, clever methods that have developed to slightly modify
+06:25
+the ReLU to avoid the dying ReLU effect and ensure training doesn't stall but still with much of the benefits you would get from a normal ReLU.
+06:34
+So here is the normal ReLU again.
+06:37
+The maximum operator can also be represented by a piecewise linear equation where less than zero, the function is zero, and greater than zero, the function is
+06:46
+X. Some extensions to ReLU meant to relax the nonlinear output of the function and to allow small negative values, let's take a look at some of those.
+07:00
+Softplus, or a smooth ReLU function, this function has its derivative as the logistic function.
+07:06
+The logistics sigmoid function is a smooth approximation of the derivative of the rectifier.
+07:12
+Here is another one.
+07:15
+The Leaky ReLU function, I love that name, is modified to allow those small negative values when the input is less than zero.
+07:25
+Its rectifier allows for a small nonzero gradient when the unit is saturated and not active.
+07:32
+The parametric ReLU learns parameters that control the leakiness and shape of the function.
+07:40
+It adaptively learns the parameters of the rectifiers.
+07:45
+Here's another good one.
+07:46
+The exponential linear unit, or ELU, or ELU, is a generalization of the ReLU that uses a parameterized exponential function to transform from positive to small negative values.
+08:00
+Its negative values push the mean of the activations closer to zero.
+08:05
+That means that activations are closer to zero, enable faster learning as they bring the gradient closer to a natural gradient.
+08:14
+Here's another good one.
+08:14
+The Gaussian error linear unit, or GELU, that's another high-performing neural network activation function like the ReLU, but its nonlinearity
+08:22
+results in the expected transformation of a stochastic regularizer, which randomly applies the identity or zero map to that neuron's input.
+08:31
+I know what you're thinking: "That's a lot of different activation functions."
+08:35
+I'm a very much a visual person.
+08:37
+Here's the quick overlay of a lot of those on that same XY plane.

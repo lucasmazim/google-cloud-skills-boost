@@ -1,0 +1,63 @@
+# 03 Build, Train and Deploy ML Models with Keras on Google Cloudashusahishauisa
+
+Course overview
+
+Introduction to the Course
+- Introduction
+
+Introduction to the TensorFlow Ecosystem
+- Introduction to the TensorFlow ecosystem
+- Introduction to Tensorflow
+- TensorFlow API hierarchy
+- Components of Tensorflow: Tensors and variables
+- Quiz: Introduction to the TensorFlow Ecosystem
+- Resources: Introduction to the TensorFlow Ecosystem
+
+Design and Build an Input Data Pipeline
+- Introduction
+- An ML recap
+- Training on large datasets with tf.data API
+- Working in-memory and with files
+- Getting the data ready for model training
+- Embeddings
+- Lab intro: TensorFlow Dataset API
+- TensorFlow Dataset API
+- Scaling data processing with tf.data and Keras preprocessing layers
+- Lab intro: Classifying structured data using Keras preprocessing layers
+- Classifying Structured Data using Keras Preprocessing Layers
+- Quiz: Design and Build Input Data Pipeline
+- Resources: Design and Build a TensorFlow Input Data Pipeline
+
+Building Neural Networks with the TensorFlow and Keras API
+- Introduction
+- Activation functions
+- Training neural networks with TensorFlow 2 and the Keras Sequential API
+- Serving models in the cloud
+- Lab intro: Introducing the Keras Sequential API on Vertex AI Platform
+- Introducing the Keras Sequential API on Vertex AI Platform
+- Training neural networks with TensorFlow 2 and the Keras Functional API
+- Lab intro: Build a DNN using the Keras Functional API on Vertex AI Platform
+- Build a DNN using the Keras Functional API
+- Model subclassing
+- Regularization basics
+- How can we measure model complexity: L1 vs. L2 Regularization
+- Quiz: Building Neural Networks in TensorFlow with Keras API
+- Resources: Building Neural Networks with the TensorFlow and Keras API
+
+Training at Scale with Vertex AI
+- Introduction
+- Training at scale with Vertex AI
+- Lab intro: Training at Scale with Vertex AI Training Service
+- Training at Scale with Vertex AI Training Service
+- Quiz: Training at Scale with Vertex AI
+- Resources: Training at Scale with Vertex AI
+
+Summary
+- Summary
+- Resource: All  questions
+- Resource: All readings
+- Resource: All slides
+
+Your Next Steps
+- Course Badge
+- Course Survey
