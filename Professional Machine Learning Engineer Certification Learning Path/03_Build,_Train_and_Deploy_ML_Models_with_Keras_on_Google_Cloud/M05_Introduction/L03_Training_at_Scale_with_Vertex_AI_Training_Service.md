@@ -1,1 +1,0 @@
-# Training_at_Scale_with_Vertex_AI_Training_Service
