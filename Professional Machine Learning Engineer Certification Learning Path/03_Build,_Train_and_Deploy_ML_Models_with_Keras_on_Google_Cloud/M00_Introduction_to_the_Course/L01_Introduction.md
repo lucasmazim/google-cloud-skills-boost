@@ -1,4 +1,4 @@
-# Introduction_to_the_TensorFlow_ecosystem
+# Introduction
 
 Welcome to the Introduction to the TensorFlow Ecosystem module.
 
