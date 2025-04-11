@@ -1,0 +1,44 @@
+Quiz: Introduction to the TensorFlow Ecosystem
+Passing score: 75%
+1.
+
+How does TensorFlow represent numeric computations?
+Flow chart
+None of the options are correct
+Using a Directed Acyclic Graph (or DAG)
+Both Using a Directed Acyclic Graph (or DAG) and Flow chart
+2.
+
+Which API is used to build performant, complex input pipelines from simple, re-usable pieces that will feed your model's training or evaluation loops.
+All of the options are correct.
+tf.Tensor
+tf.data.Dataset
+tf.device
+3.
+
+Which are useful components when building custom Neural Network models?
+tf.losses
+All of the options are correct.
+tf.optimizers
+tf.metrics
+4.
+
+What operations can be performed on tensors?
+They can be sliced
+They can be both reshaped and sliced
+They can be reshaped
+None of the options are correct.
+5.
+
+Which of the following statements is true of TensorFlow?
+Although able to run on other processing platforms, TensorFlow 2.0 is not yet able to run on Tensor Processing Units (or TPU's).
+Although able to run on other processing platforms, TensorFlow 2.0 is not yet able to run on Graphical Processing Units (or GPU's).
+TensorFlowis a scalable and single-platform programming interface for implementing and running machine learning algorithms, including convenience wrappers for deep learning.
+TensorFlow is a scalable and multi platform programming interface for implementing and running machine learning algorithms, including convenience wrappers for deep learning.
+6.
+
+Which of the following is true when we compute a loss gradient?
+It uses tape and the gradients associated with each recorded operation to compute the gradients.
+All options are correct.
+TensorFlow records all operations executed inside the context of a tf.GradientTape onto a tape.
+The computed gradient of a recorded computation will be used in reverse mode differentiation.
