@@ -1,0 +1,44 @@
+# 08 Custom Search with Embeddings in Vertex AI
+
+Embeddings for Classification and Search
+
+- Understanding Embeddings
+- Creating Embeddings with the PaLM APIs
+- Comparing Embedding Vectors
+- Understanding embeddings with Vertex AI Text-Embeddings API
+- PaLM API Embeddings limits and workarounds
+- Classification of text embeddings
+- Use the PaLM API to Cluster Products Based on Descriptions
+- Multimodal embeddings
+- Module Quiz
+
+Storing and Serving Embeddings
+
+- Managing Embeddings in PostgreSQL
+- Managing Embeddings in AlloyDB
+- Demo: Invoking AI from AlloyDB using SQL
+- Managing Embeddings in Vector Search
+- Streaming Updates into Vertex AI Vector Search
+- Using Vertex AI Multimodal Embeddings and Vector Search
+- Using BigQuery Embeddings in a RAG Architecture
+- Module Quiz
+
+Building RAG Solutions
+
+- Using RAG for longer memory in conversations
+- Ingesting data into a RAG
+- Different RAG patterns and implementations
+- Using Vertex AI Vector Search and Vertex AI Embeddings for Text for StackOverflow Questions
+- Multimodal Retrieval Augmented Generation (RAG) using the Gemini API in Vertex AI
+- Module Quiz
+
+Improving RAG Solutions
+
+- Common pitfalls with RAG solutions
+- Solution 1: Query expansion
+- Solution 1: Query expansion (continued)
+- Solution 2: Reranking using a cross-encoder
+- Solution 3: Constructing and training an Embedding Adaptor
+- Solution 4: Tuning Embedding Models
+- Improving RAG Solutions
+- Module Quiz
