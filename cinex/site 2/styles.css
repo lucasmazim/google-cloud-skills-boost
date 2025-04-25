@@ -1,0 +1,396 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Use a fonte que você linkou ou outra */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* Container para limitar a largura do conteúdo */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px; /* Padding horizontal */
+}
+
+/* Header */
+header {
+    background: #fff; /* Fundo branco */
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* Logo à esquerda, navegação à direita */
+    align-items: center;
+}
+
+header .logo a {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #007bff; /* Cor principal da sua marca */
+    text-decoration: none;
+}
+
+header nav a {
+    margin-left: 20px;
+    color: #555;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #007bff; /* Cor principal no hover */
+}
+
+.login-button {
+    /* Estilo diferenciado para o botão de login, se desejar */
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Sections Gerais */
+section {
+    padding: 80px 0; /* Espaçamento vertical entre as seções */
+    text-align: center; /* Conteúdo centralizado por padrão */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom, #e9f7ff, #ffffff); /* Gradiente suave */
+    color: #333;
+    padding: 100px 0; /* Mais padding para a seção principal */
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: #0056b3; /* Cor um pouco mais escura */
+}
+
+.hero h2 {
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.hero-image {
+    margin: 40px auto;
+    max-width: 800px; /* Largura máxima da imagem */
+    /* Adicione border, box-shadow se quiser destacar a imagem/vídeo */
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão CTA */
+.cta-button {
+    display: inline-block; /* Permite padding e margem */
+    background-color: #007bff; /* Cor principal */
+    color: #fff; /* Texto branco */
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Cor mais escura no hover */
+}
+
+.cta-subtext {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Problem/Solution Section */
+.problem-solution {
+    background-color: #f4f4f4; /* Fundo cinza claro */
+    text-align: left; /* Alinha texto à esquerda */
+}
+
+.problem-solution h2 {
+     font-size: 2em;
+     margin-bottom: 20px;
+     color: #333;
+}
+
+.problem-solution p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.problem-solution h3 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+
+/* Features Section */
+.features {
+    background-color: #fff;
+}
+
+.features h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.feature-list {
+    display: grid; /* Usa Grid para layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas flexíveis */
+    gap: 30px; /* Espaço entre os itens */
+}
+
+.feature-item {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: left; /* Alinha texto do item à esquerda */
+}
+
+.feature-icon {
+    font-size: 2em; /* Tamanho do ícone placeholder */
+    color: #007bff;
+    margin-bottom: 15px;
+    display: inline-block; /* Para centralizar ou alinhar se quiser */
+}
+
+.feature-item h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.feature-item p {
+    color: #555;
+}
+
+/* Social Proof Section */
+.social-proof {
+    background-color: #e9f7ff; /* Outro fundo claro */
+}
+
+.social-proof h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.testimonial {
+    max-width: 700px;
+    margin: 20px auto 40px auto;
+    font-style: italic;
+    color: #555;
+    position: relative; /* Para usar pseudo-elementos de aspas */
+}
+
+.testimonial .quote:before {
+    content: '"';
+    font-size: 3em;
+    color: #007bff;
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    opacity: 0.5;
+}
+
+.testimonial .quote:after {
+    content: '"';
+    font-size: 3em;
+    color: #007bff;
+    position: absolute;
+    right: -20px;
+    bottom: -10px;
+    opacity: 0.5;
+}
+
+.testimonial .author {
+    margin-top: 20px;
+    font-weight: 700;
+    color: #333;
+    font-style: normal;
+}
+
+.logo-grid {
+    display: flex;
+    justify-content: center; /* Centraliza logos */
+    flex-wrap: wrap; /* Quebra linha se não couber */
+    gap: 30px; /* Espaço entre logos */
+    margin-top: 40px;
+}
+
+.logo-grid img {
+    max-height: 50px; /* Tamanho máximo dos logos */
+    opacity: 0.7; /* Suaviza um pouco */
+    transition: opacity 0.3s ease;
+}
+
+.logo-grid img:hover {
+    opacity: 1;
+}
+
+/* Final Call to Action Section */
+.final-cta {
+    background-color: #007bff; /* Cor principal para destaque */
+    color: #fff; /* Texto branco */
+    padding: 60px 0;
+}
+
+.final-cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff; /* Título branco */
+}
+
+.final-cta p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #eee;
+}
+
+.final-cta .cta-button {
+    background-color: #fff; /* Botão branco */
+    color: #007bff; /* Texto na cor principal */
+    border: 2px solid #fff;
+}
+
+.final-cta .cta-button:hover {
+    background-color: #f0f0f0; /* Cinza claro no hover */
+    color: #0056b3;
+    border-color: #f0f0f0;
+}
+
+.final-cta .cta-subtext {
+    color: #ddd;
+}
+
+
+/* Footer */
+footer {
+    background-color: #333; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite quebra em telas pequenas */
+}
+
+.footer-info {
+    margin-bottom: 10px; /* Espaço em telas pequenas */
+}
+
+.footer-nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #fff;
+}
+
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column; /* Empilha logo e navegação */
+        text-align: center;
+    }
+
+    header nav {
+        margin-top: 15px;
+    }
+
+    header nav a {
+        margin: 0 10px; /* Ajusta margem dos links */
+        display: inline-block; /* Garante que fiquem lado a lado */
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero h2 {
+        font-size: 1.2em;
+    }
+
+    section {
+        padding: 50px 0; /* Reduz padding em mobile */
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    }
+
+    .feature-item {
+        text-align: center; /* Centraliza item em mobile */
+    }
+
+    .feature-icon {
+        margin: 0 auto 15px auto; /* Centraliza ícone */
+    }
+
+    .testimonial {
+         max-width: 90%; /* Usa mais largura em mobile */
+         margin: 20px auto 30px auto;
+    }
+     .testimonial .quote:before,
+     .testimonial .quote:after {
+         font-size: 2em; /* Reduz tamanho das aspas */
+         left: 0;
+         right: 0;
+         text-align: center;
+         top: -5px;
+         bottom: -5px;
+     }
+
+    .logo-grid {
+        gap: 20px; /* Reduz espaço entre logos */
+    }
+
+    .final-cta h2 {
+        font-size: 2em;
+    }
+
+    footer .container {
+        flex-direction: column; /* Empilha footer */
+        text-align: center;
+    }
+
+    .footer-nav {
+        margin-top: 15px;
+    }
+
+    .footer-nav a {
+         margin: 0 10px; /* Ajusta margem dos links no footer */
+    }
+
+}
